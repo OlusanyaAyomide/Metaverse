@@ -149,7 +149,7 @@
   @apply h-full w-full object-cover
 }
 .sm-text{
-  @apply text-white/40 text-[14px]
+  @apply text-white/70 text-[14px]
 }
 .reward-cover{
   @apply before:inset-0 before:w-full before:h-full before:bg-white/10 before:absolute

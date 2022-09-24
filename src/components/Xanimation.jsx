@@ -30,7 +30,7 @@ const Herouser={
     "animate":{
         opacity:1,
         transition:{
-            duration:5
+            duration:3
         }
     }
 }
@@ -51,12 +51,12 @@ const GetStartedAn={
 }
 const GetStartedR={
     "initial":{
-        x:300
+        x:100
     },
     "animateR":{
         x:0,
         transition:{
-            duration:1,
+            duration:0.5,
             delay:0.1
         }
     }
@@ -76,19 +76,19 @@ const StatL ={
 }
 const StatR ={
     'initial':{
-        x:-300,
+        x:-200,
     },
     'animateR':{
         x:0,
         transition:{
             delay:0.1,
-            duration:0.6
+            duration:0.5
         }
     }
 }
 const CardL={
     'initial':{
-        x:-250,
+        x:-200,
     },
     'animatecardL':{
         x:0,
@@ -100,7 +100,7 @@ const CardL={
 }
 const CardR={
     'initial':{
-        x:250,
+        x:200,
     },
     'animatecardR':{
         x:0,

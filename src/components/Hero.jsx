@@ -22,12 +22,12 @@ export default function Hero() {
          <div>
           <div className='flex mt-2  items-center bg-discount-gradient rounded-lg pr-[2px]'>
              <img src={discount} alt="" className='w-8 h-8' />
-             <h3 className='text-[12px] text-white/50'>20% DISCOUNT FOR <span className='text-white'>1 MONTH</span> ACCOUNT</h3>
+             <h3 className='text-[12px] text-white/70'>20% DISCOUNT FOR <span className='text-white'>1 MONTH</span> ACCOUNT</h3>
            </div>
            <div className='mt-5 flex'>
             <div className='w-full lg:w-8/12'>
               <h1 className='text-[30px] md:text-[40px] lg:text-[45px] leading-10 lg:leading-[60px] font-bold'>The Next <span className='text-gradient'>Generation</span> payment Method.</h1>
-              <motion.p className='mt-7 lg:leading-8 text-[14px] text-white/30' variants={TeamInfoAn} initial="initial" animate="animate">{TeamInfo.content}</motion.p>
+              <motion.p className='mt-7 lg:leading-8 text-[14px] text-white/70' variants={TeamInfoAn} initial="initial" animate="animate">{TeamInfo.content}</motion.p>
             </div>
               <div className='hidden lg:block lg:w-4/12'>
                 <div className='h-24 w-24 rounded-full p-1 text-white bg-blue-gradient'>

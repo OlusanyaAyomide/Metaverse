@@ -31,7 +31,7 @@ useEffect(()=>{
           </div>
           </div>
         </motion.div>
-        <motion.div className="w-full lg:w-6/12 mb-5 lg:mb-2" ref={refR} variants={CardR} initial="initial" animate={control}>
+        <motion.div className="w-full  lg:w-6/12 mb-5 lg:mb-2" ref={refR} variants={CardR} initial="initial" animate={control}>
           <div className='px-2 '>
             <div className='h-[300px] w-[300px] md:h-[400px] md:w-[400px] mx-auto'><img src={card} alt="" className='cover'/></div>
           </div>

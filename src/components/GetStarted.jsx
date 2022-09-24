@@ -38,7 +38,7 @@ export default function GetStarted() {
       <motion.div className='w-full lg:w-6/12' variants={GetStartedAn} initial="initial" animate={controls} ref={ref}>
         <div className='lg:pr-2 pb-10 lg:pb-0'>
           <h1 className="text-2xl sm:text-[28px] lg:text-3xl font-semibold mb-5 lg:mb-8">{Getstarted.header}</h1>
-          <p className='text-white/40 text-[14px] mb-5 lg:mb-8'>{Getstarted.content}</p>
+          <p className='text-white/70 text-[14px] mb-5 lg:mb-8'>{Getstarted.content}</p>
           <button className='outline-none text-[14px] bg-blue-gradient rounded-md py-1 px-2 text-black/80 font-semibold'>Get Started</button>
         </div>
       </motion.div>
