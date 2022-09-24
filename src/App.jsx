@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './style.js'
-import {Billing,Hero,Business,Button,Carddeal,Clients,CTA,Feedback,Footer,GetStarted,Navbar,Stats,Testimonies} from "./components/index"
+import {Hero,Business,Carddeal,Clients,CTA,Footer,GetStarted,Navbar,Stats,Testimonies} from "./components/index"
 import {useState,useEffect} from 'react'
 
 function App(){
