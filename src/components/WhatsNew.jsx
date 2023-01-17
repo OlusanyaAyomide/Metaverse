@@ -12,7 +12,6 @@ export default function WhatsNew() {
     const control = useAnimation()
     useEffect(()=>{
         if (isInView){control.start("animate")}
-        if (!isInView){control.start("initial")}
     },[isInView])
 
     const featureList = newFeatures.map((item,key)=>{
@@ -26,7 +25,7 @@ export default function WhatsNew() {
     })
   return (
     <section className='cont -mt-24 pt-4 flex flex-wrap pb-32 relative z-30' ref={ref}>
-       <motion.div className='w-full md:w-6/12 md:pt-8 '  variants={fadeUp} initial="initial" whileInView={"animate"}>
+       <motion.div className='w-full md:w-6/12 md:pt-8 '  variants={fadeUp} initial="initial" animate={"animate"}>
        <h1 className='min-header'>What's New?</h1>  
        <h1 className='big-header mb-3'>What's New about MetaVerse</h1>
        <div className='flex w-full'>

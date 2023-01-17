@@ -11,7 +11,6 @@ export default function Tracker() {
   useEffect(()=>{
     if(isInView){
       control.start("animate")}
-    else(control.start("initial"))
   },[isInView])
   return (
     <section className='cont -mt-16 py-2 pb-32 relative'>

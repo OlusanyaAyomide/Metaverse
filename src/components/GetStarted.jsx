@@ -12,7 +12,6 @@ export default function GetStarted() {
 
     useEffect(()=>{
         if (isInView){controls.start("animate")}
-        if (!isInView){controls.start("initial")}
    
     },[isInView])
     const featureList = startingFeatures.map((item,key)=>{

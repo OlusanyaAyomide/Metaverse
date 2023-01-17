@@ -5,7 +5,7 @@ import { navVariants } from "../../utils/motion";
 
 export default function Navbar(){
     return(
-    <motion.div variants={navVariants} initial="hidden" whileInView="show" className="px-6 py-8 relative">
+    <motion.div variants={navVariants} initial="hidden" animate="show" className="px-6 py-8 relative">
         <div className="absolute w-6/12 inset-0 mygrad-01 border"></div>
         <div className="flex justify-between max-width">
             <img src="./search.svg" alt="search" className="h-[24px] w-[24px]"/>

@@ -6,7 +6,7 @@ import { FadeIn,fadeUp} from '../../utils/motion'
 export default function Insights() {
     const insightList = insights.map((item,key)=>{
         return(
-        <motion.div key={key} className="flex my-8 items-center flex-wrap" variants={fadeUp} initial="initial" whileInView="animate">
+        <motion.div key={key} className="flex my-8 items-center flex-wrap" variants={fadeUp} initial="initial" animate="animate">
             <div className="w-3/12 md:w-3/12 lg:w-2/12 rounded-lg overflow-hidden ">
                 <div className='h-[100px] w-full rounded-xl overflow-hidden]'>
                        <img src={item.imgUrl} alt="image" className='h-full w-full object-cover rounded-lg'/>
@@ -25,7 +25,7 @@ export default function Insights() {
   return (
     <section className='-mt-16 cont relative pb-16'>
         <h1 className='min-header text-center my-2'>Insights</h1>
-        <motion.h1 className='big-header mb-4 text-center' variants={fadeUp} initial="initial" whileInView="animate">Insights About Metaverse</motion.h1>
+        <motion.h1 className='big-header mb-4 text-center' variants={fadeUp} initial="initial" animate="animate">Insights About Metaverse</motion.h1>
         <div className='w-full md:w-10/12  lg:w-9/12 mx-auto mt-4 relative z-20'>
             {insightList}
         </div>
