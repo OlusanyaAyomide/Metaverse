@@ -1,238 +1,109 @@
-
-
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
-
-export const navLinks = [
+import {
+  Planet01,
+  Planet02,
+  Planet03,
+  planet04,
+  planet05,
+  headset,
+  vrpano,
+  planet6,
+  planet7,
+  planet8,
+} from "../assests/exporter";
+export const exploreWorlds = [
   {
-    id: "home",
-    title: "Home",
+    id: "world-1",
+    imgUrl: Planet01,
+    title: "The Hogwarts",
   },
   {
-    id: "features",
-    title: "Features",
+    id: "world-2",
+    imgUrl: Planet02,
+    title: "The Upside Down",
   },
   {
-    id: "product",
-    title: "Product",
+    id: "world-3",
+    imgUrl: Planet03,
+    title: "Kadirojo Permai",
   },
   {
-    id: "clients",
-    title: "Clients",
-  },
-];
-export const TeamInfo={
-  'content':'Our team of experts uses a methodology to identify the credit cards most likely to fit your needWe examine annual percentage rates, annual fees',
-  'users':[{
-    'number':'3800+',
-    'span':'User Active'
+    id: "world-4",
+    imgUrl: planet04,
+    title: "Paradise Island",
   },
   {
-    'number':'230+',
-    'span':'Trusted By company'
-  },
-  {
-    'number':'$230M',
-    'span':'Transactions'
-  }
-]
-}
-export const startedfeatures = [
-  {
-    id: "feature-1",
-    icon: star,
-    title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
-  },
-  {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
-  },
-  {
-    id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    id: "world-5",
+    imgUrl: planet05,
+    title: "Hawkins Labs",
   },
 ];
 
-export const Getstarted={
-  "header":"You do the business, we will handle the money",
-  "content":"With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.",
-  "rewards":"The best credit cards offer some tantalizing combinations of promotions and prizes",
-  "secure":"We take proactive steps make sure your information and transactions are secure.",
-  "balance":"We take proactive steps make sure your information and transactions are secure."
-}
-export const Statistics={
-  "header":"Easily Control Your Voice And Invoicing",
-  "content":"Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea placerat."
-}
-export const Carddeals={
-  "header":"Find a better card deal in few easy steps.",
-  "content":"Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau."
-}
+export const startingFeatures = [
+  "Find a world that suits all your fantasy",
+  "Enter the world with just a click to begin your journey",
+  "Explore different worlds,and join the metaverse community",
+];
 
-export const TestimoniesL={
-  "header":"What people are saying about us",
-  "content":"Everything you need to accept card payments and grow your business anywhere on the planet.",
-  'testimony':[
-    {
-      'content':'Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.',
-    'name':"Herman Jensen",
-    "role":"Founder & Leader",
-    "logo":people01
+export const newFeatures = [
+  {
+    imgUrl: vrpano,
+    title: "A new world",
+    subtitle:
+      "With the community exponentially growing,new worlds emerges for you daily",
   },
   {
-    'content':"Money makes your life easier. If you're lucky to have it, you are lucky.,",
-    'name':"Steve Mark",
-    "role":"Founder & Leader",
-    "logo":people02
-  },
-  {
-    'content':"It is usually people in the money business, finance, and international trade that are really rich.",
-    'name':"Kenn Gallagher",
-    "role":"Founder & Leader",
-    "logo":people03
-  }
-  ]
-}
-
-export const ClientConst={
-  "header":"Let's try our service now!",
-  "content":"Everything you need to accept card payments and grow your business anywhere on the planet."
-}
-
-
-export const stats = [
-  {
-    id: "stats-1",
-    title: "User Active",
-    value: "3800+",
-  },
-  {
-    id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
-  },
-  {
-    id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    imgUrl: headset,
+    title: "More realistic",
+    subtitle:
+      "In the latest update, your eyes are narrow, making the world more realistic than ever",
   },
 ];
 
-export const FooterContent={
-  'content':"A new way to make the payments easy, reliable and secure."
-}
-
-export const footerLinks2 = [
+export const insights = [
   {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
-      },
-      {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
-      },
-      {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
-    ],
+    imgUrl: planet6,
+    title: "The launch of the Metaverse takes us to the next step",
+    subtitle:
+      "Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.",
   },
   {
-    title: "Community",
-    links: [
-      {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
+    imgUrl: planet7,
+    title: "7 tips to easily master the madness of the Metaverse",
+    subtitle:
+      "Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum",
   },
   {
-    title: "Partner",
-    links: [
-      {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
-      },
-      {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
-      },
-    ],
+    imgUrl: planet8,
+    title: "With one platform you can explore the whole world virtually",
+    subtitle:
+      "Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem",
   },
 ];
 
-export const socialMedia = [
+export const socials = [
   {
-    id: "social-media-1",
-    icon: instagram,
-    link: "https://www.instagram.com/",
+    name: "twitter",
+    url: "/twitter.svg",
   },
   {
-    id: "social-media-2",
-    icon: facebook,
-    link: "https://www.facebook.com/",
+    name: "linkedin",
+    url: "/linkedin.svg",
   },
   {
-    id: "social-media-3",
-    icon: twitter,
-    link: "https://www.twitter.com/",
+    name: "instagram",
+    url: "/instagram.svg",
   },
   {
-    id: "social-media-4",
-    icon: linkedin,
-    link: "https://www.linkedin.com/",
+    name: "facebook",
+    url: "/facebook.svg",
   },
 ];
+export const MetaverseWord = {
+  data: "is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the madness of the metaverse of today, using only VR devices you can easily explore the metaverse world you want, turn your dreams into reality. Let's explore the madness of the metaverse by scrolling down",
+};
+export const HeaderText = {
+  text: "Track friends around you and invite them to play together in the same world",
+};
 
-export const clients = [
-  {
-    id: "client-1",
-    logo: airbnb,
-  },
-  {
-    id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
-  },
-];
+export const GlassText =
+  "“With the development of today's technology, metaverse is very useful for today's work, or can be called web 3.0. by using metaverse you can use it as anything”";

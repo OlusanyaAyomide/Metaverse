@@ -1,170 +1,247 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 
 
-:root {
-  --black-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
-
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eudoxus Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
-.text-gradient {
-  background: radial-gradient(
-    64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
   );
+  filter: blur(125px);
+}
+
+.mygrad-01{
+  background-image: linear-gradient(300deg,rgb(179, 21, 179) 0%
+  , rgb(226, 115, 226) 26%,  
+  rgb(184, 230, 228) 39%,
+    rgb(171, 200, 228) 61%,
+     rgb(116, 167, 214) 74%,
+      rgb(25, 77, 219) );
+
+   filter:blur(70px)
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    97.86deg,
+    #a509ff 0%,
+    #34acc7 53.65%,
+    #a134c7 100%
+  );
+  filter:120px
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 200px;
+  height: 438px;
+  top: 0px;
+  right: 0px;
+
+  background: #7aebfb;
+  filter: blur(190px);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.089);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* backdrop-filter: blur(2px); */
+  /*-webkit-backdrop-filter: blur(1px); */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.bg-primary{
+  background-color: #1a232e;
+}
+
+.feedback-gradient {
+  position: absolute;
+  width: 200px;
+  height: 316px;
+  left: 0px;
+  top: 0px;
+
+  background: #8d39a3;
+  filter: blur(175px);
+}
+
+.footer-gradient {
+  background: #65c4fa;
+  filter: blur(90px);
+}
+
+.started-grad{
+  background: radial-gradient(ellipse,#297ddd,#1a232e);
+  filter: blur(70px);
+}
+
+.about-grad{
+  background: radial-gradient(circle at right,
+    #8d39a3 40%,
+    #7aebfb 60%,
+    #76a7d6 72%,
+    #297ddd  100%
+  );
+  filter:blur(60px) 
+}
+
+.track-grad{
+  background: linear-gradient(#297ddd 15%,#c8e0e4 25%,#7aebfb,#8d39a3 70% 80%,#297ddd);
+  filter:blur(60px)
+  
+}
+
+.explore-cont{
+  background: linear-gradient(to right,#1dcbe2 ,#8d39a3,#297ddd,#76a7d6,#297ddd); 
+  filter:blur(70px)
+}
+
+.about-grad-2{
+  background:linear-gradient(to right,#297ddd,#8d39a3);
+  filter:blur(90px)
+}
+
+.glass-grad{
+  background: #8e39a3be;
+  filter:blur(50px)
+}
+
+
+
+.versus{
+  -webkit-text-stroke:0.5px gray;
+}
+.versus::before{
+  content:attr(data-text);
+  position:absolute;
+  top:-2px;
+  left:0;
+  width:0%;
+  height:120%;
+  background: -webkit-linear-gradient(#eee,#8d39a3, #1dcbe2);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* text-fill-color: transparent; */
+  border-right:10px solid rgba(255, 255, 255, 0.5);
+  overflow:hidden;
+  animation:animate 6s linear infinite
 }
 
-.bg-blue-gradient {
-  background: linear-gradient(
-    157.81deg,
-    #def9fa -43.27%,
-    #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
-  );
-}
-
-.bg-black-gradient {
-  background: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-}
-
-.bg-black-gradient-2 {
-  background: linear-gradient(
-    -168.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-}
-
-.bg-gray-gradient {
-  background: linear-gradient(
-    153.47deg,
-    rgba(255, 255, 255, 0) -341.94%,
-    #14101d 95.11%
-  );
-}
-
-.bg-discount-gradient {
-  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
-}
-
-.box-shadow {
-  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
-
-.sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+@keyframes animate{
+  0%,10%,100%{
+    width:0
   }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  70% ,90%{
+    width:100%
   }
 }
 
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+/* innerWidth */
+.max-width{
+  @apply 2xl:max-w-[1280px] w-full
+}
+
+.paddings{
+  @apply sm:p-16 px-6 py-12
+}
+.ypaddings{
+  @apply sm:py-16 py-12
+}
+
+
+.topadding{
+  @apply sm:pt-16 pt-12
+}
+
+.bottompadding{
+  @apply sm:pb-16 pb-12
+}
+
+.flex-center{
+  @apply flex justify-center items-center
+}
+.flex-start{
+  @apply flex justify-start items-start
+}
+.flex-end{
+  @apply flex justify-end
+}
+.navpadding{
+  @apply pt-[98px]
+}
+
+.cont{
+  @apply px-3 md:px-4 lg:px-5
+}
+.heroheading{
+    @apply font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white
   }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.feature-card:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
-}
-
-.feedback-container .feedback-card:last-child {
-  margin-right: 0px;
-}
-
-.feedback-card {
-  background: transparent;
-}
-
-.feedback-card:hover {
-  background: var(--black-gradient);
-}
-
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
-}
-
-.white__gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
-}
-
-.container{
-  @apply max-w-screen-2xl mx-auto px-8 md:px-16
-}
-.row{
-  @apply flex flex-wrap
-}
-.cover-image{
-  @apply h-full w-full object-cover
-}
-.sm-text{
-  @apply text-white/70 text-[14px]
-}
-.reward-cover{
-  @apply before:inset-0 before:w-full before:h-full before:bg-white/10 before:absolute
+.herodtext{
+  @apply md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]
 }
 .min-header{
-  @apply text-2xl sm:text-[28px] lg:text-3xl font-semibold mb-5 lg:mb-8
+  @apply text-sm md:text-base text-gray-500 z-10 
 }
-.row-item{
-  @apply w-full lg:w-6/12 
+.big-header{
+  @apply capitalize my-2 text-white text-3xl md:text-4xl lg:text-5xl font-semibold
 }
-.min-image{
-  @apply   w-[80px] h-[25px] lg:w-[100px] lg:h-[30px]
+.people-cont{
+  @apply absolute h-[40px] w-[40px] z-30 md:w-[43px] md:h-[43px] lg:w-[46px] lg:h-[46px] rounded-full before:h-[130%] before:w-[130%] before:-z-20 before:absolute before:rounded-full before:-top-[6px] before:-right-[6px] before:blur-md after:w-[10px] after:h-[20px] after:rotate-45 after:bg-gray-600/80 after:right-[26%] after:-bottom-[4px] after:absolute after:-z-10 after:rounded-sm}
+.track-image{
+  @apply h-full w-full object-cover border-2 border-gray-600/80 rounded-full 
 }
-.client-cover{
-  @apply before:inset-0 before:w-full before:h-full before:bg-gradient-to-bl before:absolute
-  before:from-white/10
+.planet-cont{
+  @apply absolute z-10  h-[70px] w-[120px] rounded-lg border-2  border-gray-600/70 before:w-[130%] before:h-[150%] before:absolute before:-z-20 before:rounded-xl before:inset-0 before:-left-[15%]
+  before:-top-[25%] before:blur-xl
 }
+.planet-img{
+  @apply object-cover h-full w-full border-2 border-gray-700 rounded-lg
+}
+
 @tailwind utilities;

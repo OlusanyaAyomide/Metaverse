@@ -1,53 +1,47 @@
-import React,{useState,useEffect} from 'react'
-import { Getstarted } from '../constants'
-import { startedfeatures } from '../constants'
-import { useInView } from 'react-intersection-observer'
+import React from 'react'
+import { startingFeatures } from '../constants'
+import { getstart } from '../assests/exporter'
+import { fadeUp,GetStartedImg,FadeIn } from '../../utils/motion'
 import { motion,useAnimation } from 'framer-motion'
-import { GetStartedAn,GetStartedR } from './Xanimation'
-
-
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 export default function GetStarted() {
-  const controls=useAnimation()
-  const [ref,leftView]= useInView()
-  const [ref2,RightView]= useInView()
-  const startedinfo = startedfeatures.map((item,key)=>{
-    return(
-    <div className={`flex w-full relative rounded-xl mb-5 overflow-hidden ${key == 1?'reward-cover':''}`} key={key}>
-      <div className='w-[20%] lg:w-[16%] flex'>
-        <div><img src={item.icon} alt="" className='w-[25px] h-[25px] md:w-[28px] md:h-[28px] relative top-3 sm:left-2 md:left-3 lg:left-2'/></div>
-      </div>
-      <div className=''>
-        <h1 className="pb-1">{item.title}</h1>
-        <p className='sm-text'>{item.content}</p>
-      </div>
-    </div>
-    )
-  })
-  useEffect(()=>{
-    if (leftView){
-      controls.start("animate")
-    }
-    if (RightView){
-      controls.start("animateR")
-    }
-  },[controls,leftView,RightView])
+    const [ref,isInView] = useInView()
+    const controls = useAnimation()
+
+    useEffect(()=>{
+        if (isInView){controls.start("animate")}
+        if (!isInView){controls.start("initial")}
+   
+    },[isInView])
+    const featureList = startingFeatures.map((item,key)=>{
+        return(
+            <div className='flex items-center my-4' key={key}>
+                <div className='w-fit pr-2 h-full items-center justify-center'>
+                    <span className='bg-gray-600/50 p-2 text-white font-semibold rounded-lg'>0{key+1}</span>
+                </div>
+                <div className='pl-2 w-full'>
+                    <h1 className='text-gray-400 text-sm md:text-base'>{item}</h1>
+                </div>
+            </div>
+        )
+    })
   return (
-    <section className='text-white mt-20 lg:w-25 overflow-hidden'>
-      <div className='row'>
-      <motion.div className='w-full lg:w-6/12' variants={GetStartedAn} initial="initial" animate={controls} ref={ref}>
-        <div className='lg:pr-2 pb-10 lg:pb-0'>
-          <h1 className="text-2xl sm:text-[28px] lg:text-3xl font-semibold mb-5 lg:mb-8">{Getstarted.header}</h1>
-          <p className='text-white/70 text-[14px] mb-5 lg:mb-8'>{Getstarted.content}</p>
-          <button className='outline-none text-[14px] bg-blue-gradient rounded-md py-1 px-2 text-black/80 font-semibold'>Get Started</button>
+    <section className='cont -my-6 relative pb-40'  ref={ref}>
+        <div className='flex flex-wrap py-2 items-center relative z-50'>
+            <div className='w-full md:w-6/12 h-[300px] -mt-4 md:mt-0'>
+                <motion.img src={getstart} alt="sarted" className='h-full w-full object-contain' variants={GetStartedImg} initial="initial" animate={controls}/>
+            </div>
+            <motion.div className='w-full md:w-6/12 py-2 md:pl-4' variants={fadeUp} initial="initial" whileInView={"animate"}>
+                <h1 className='text-sm md:text-base text-gray-300 z-10'>How Metaverse Works</h1>    
+                <h1 className='big-header text-center md:text-left'>Get Started With just few clicks</h1>  
+                <div>
+                    {featureList}
+                </div>    
+            </motion.div>
         </div>
-      </motion.div>
-      <motion.div className='w-full lg:w-6/12' ref={ref2} variants={GetStartedR} initial="initial" animate={controls}>
-        <div className='lg:pl-2 '>
-          {startedinfo}
-        </div>
-      </motion.div>
-      </div>
+        <motion.div className="absolute z-0 w-[70%] h-32 md:h-44  rounded-[40%] bottom-0 left-[15%] started-grad rotate-45" variants={FadeIn} initial="initial" whileInView="animate"></motion.div>
     </section>
   )
 }

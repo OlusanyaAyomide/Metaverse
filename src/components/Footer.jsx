@@ -1,35 +1,35 @@
 import React from 'react'
-import { logo } from '../assets'
-import { footerLinks2,FooterContent} from '../constants'
-
-const AllList = footerLinks2.map((item,key1)=>{
-  return(
-  <div className='w-4/12' key={key1}>
-      <h1 className='sm-text text-white/80 mb-5 lg:text-base'>{item.title}</h1>
-      <ul className='w-full'>
-      {item.links.map((link,key2)=>{
-        return(
-            <li key={key2} className='sm-text text-[10px] my-2 lg:text-[12px]'><a href={link.link}>{link.name}</a></li>
-        )
-      })}
-      </ul>
-  </div>
-  )
-}
-)
 
 export default function Footer() {
+
+  const Enter = ()=>{
+    return(
+      <span className='bg-blue-500/50 py-2 px-4 text-sm md:text-base rounded-lg'>EnterMetaVerse</span>
+    )
+  }
   return (
-    <section className='row pt-10 border-b-2 border-white/70'>
-      <div className='w-full lg:w-5/12 mb-10 mx-auto'>
-        <div className='lg:pr-10 mb-5'>
-            <img src={logo} alt="" className='w-[120px] h-[35]'/>
-        </div> 
-        <p className='sm-text'>{FooterContent.content}</p>
+    <section className='text-white mt-2 mb-4p py-2 cont pb-2 relative'>
+      <div className='flex flex-col items-center sm:flex-row pb-4 border-b border-gray-400'>
+        <div className='w-full sm:hidden mb-2'>
+            <Enter/>
+        </div>
+        <h1 className='big-header w-full sm:w-10/12'>Enter The Metaverse</h1>
+        <div className='hidden  sm:w-2/12 sm:flex justify-end'>
+          <Enter/>
+        </div>
       </div>
-      <div className='w-full lg:w-7/12 flex '>
-        {AllList}
+      <div className='flex justify-between relative z-20 items-center mt-2'>
+          <h1 className='text-white font-semibold'>METAVERSUS</h1>
+          <span className='text-12px md:text-[14px] text-gray-500'>Copyright &#169;</span>
+          <div className='text-white text-sm md:text-base flex items-center justify-around w-3/12'>
+            <span className='fa fa-twitter'></span>
+            <span className="fa fa-linkedin"></span>
+            <span className="fa fa-instagram"></span>
+            <span className='fa fa-facebook'></span>
+          </div>  
       </div>
+      <div className='absolute z-0 w-10/12 left-[8.4%] -bottom-10 rounded-[40%] h-[90px] footer-gradient rounded-t-[10%]'>eee</div>
+
     </section>
   )
 }

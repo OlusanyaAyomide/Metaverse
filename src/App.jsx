@@ -1,36 +1,46 @@
 import React from 'react'
 import styles from './style.js'
-import {Hero,Business,Carddeal,Clients,CTA,Footer,GetStarted,Navbar,Stats,Testimonies} from "./components/index"
-import {useState,useEffect} from 'react'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import About from "./components/About.jsx"
+import Explore from './components/Explore.jsx'
+import GetStarted from './components/GetStarted.jsx'
+import WhatsNew from './components/WhatsNew.jsx'
+import Tracker from './components/Tracker.jsx'
+import Insights from './components/Insights.jsx'
+import Glass from './components/Glass.jsx'
+import Footer from './components/Footer.jsx'
+import Animate from './components/Animate.jsx'
+import { useEffect,useState } from 'react'
+
 
 function App(){
-    const [isloading,setisloading] = useState(false)
-
+    const [isAnimating,setIsAnimating] = useState(true)
     useEffect(()=>{
-        setTimeout(()=>{
-                setisloading(true)
-        },2000)
+        setTimeout(()=>setIsAnimating(false),6000)
     },[])
-
-    if (!isloading){
+    if(!isAnimating){
+        return (
+            <div className='bg-[#1a232e] overflow-hidden'>
+                <Navbar/>
+                <Hero/>
+                <About/>
+                <Explore/>
+                <GetStarted/>
+                <WhatsNew/>
+                <Tracker/>
+                <Insights/>
+                <Glass/>
+                <Footer/>
+            </div>
+          )
+    }
+    if(isAnimating){
         return(
-            <Business/>
+            <><Animate/></>
         )
     }
-    return (
-        <div className='bg-[#00040F]'>
-            <div className='container'><Navbar/></div>
-            <div className='container'><Hero/></div>
-            <div className='container'><GetStarted/></div>
-            <div className="container"><Stats/></div>
-            <div className="container"><Carddeal/></div>
-            <div className="container"><Testimonies/></div>
-            <div className="container"><Clients/></div>
-            <div className="container bg-[#0B0A0C99]"><Footer/></div>
-            <div className="container bg-[#0B0A0C99]"><CTA/></div>
 
-        </div>
-      )
 }
 
 export default App
