@@ -102,7 +102,7 @@ export const fadeIn = (direction, type, delay, duration) => {
       opacity: 1,
       transition: {
         type,
-        delay,
+        delay:delay-0.2,
         duration,
         ease: "easeOut",
       },
@@ -120,7 +120,6 @@ export const planetVariants = (direction) => ({
     rotate: 0,
     transition: {
       type: "spring",
-      duration: 1.8,
       delay: 0.5,
     },
   },
@@ -137,7 +136,6 @@ export const zoomIn = (delay, duration) => ({
     transition: {
       type: "tween",
       delay,
-      duration,
       ease: "easeOut",
     },
   },
@@ -186,7 +184,6 @@ export const AboutF = {
     y: 0,
     scale: 1,
     transition: {
-      delay: 0.2,
       duration: 1.5,
       type: "tween",
     },
@@ -213,8 +210,7 @@ export const fadeUp = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 0.5,
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
@@ -245,7 +241,6 @@ export const RollIn = {
     rotate: 0,
     x: 0,
     transition: {
-      delay: 1,
       duration: 3,
       type: "tween",
     },
@@ -266,7 +261,7 @@ export const Spinner = (side) => {
       opacity: 1,
       transition: {
         delay: side === "left" ? 1 : side === "center" ? 1.5 : 2,
-        duration: 2,
+        duration: 1,
         type: "tween",
       },
     },
@@ -319,7 +314,6 @@ export const GlassMotion = (side) => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 1,
         duration: 1.5,
       },
     },
