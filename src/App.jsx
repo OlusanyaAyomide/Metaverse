@@ -17,7 +17,7 @@ import { useEffect,useState } from 'react'
 function App(){
     const [isAnimating,setIsAnimating] = useState(true)
     useEffect(()=>{
-        setTimeout(()=>setIsAnimating(false),6000)
+        setTimeout(()=>setIsAnimating(false),5000)
     },[])
     if(!isAnimating){
         return (

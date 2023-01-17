@@ -7,9 +7,9 @@ export default function Animate() {
   return (
    <section className='h-[100vh] w-[100vw] flex items-center justify-center bg-[#1a232e]'>
         <div>
-            <motion.h1 className='font-bold text-5xl md:text-6xl t font-sans tracking-widest text-transparent versus relative text-center' variants={loading} initial="initial" animate="animate"
+            <h1 className='font-bold text-5xl md:text-6xl t font-sans tracking-widest text-transparent versus relative text-center'
             data-text = "METAVERSE "
-            >METAVERSE </motion.h1>
+            >METAVERSE </h1>
         </div>
    </section>
   )
